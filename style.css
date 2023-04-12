@@ -1,24 +1,84 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0 10%;
+    margin-bottom: 50px;
 }
 
 h1 {
-    font-size: 35px;
-    letter-spacing: 1px;
-    font-family: Georgia, Times, serif;
+    font-size: 50px;
+    font-weight: 400;
+    color: rgb(247, 247, 247);
+    letter-spacing: 2px;
+    text-align: right;
+    margin-right: 20%;
 }
 
-#name {
-    padding: 0 10px 1px 10px;
-    border: rgba(150, 150, 150, 0.5);
-    border-style: none solid solid none;
-    border-width: 1px;
+h5 {
+    text-align: right;
+    margin-right: 20%;
+    color: rgb(247, 247, 247);
+    letter-spacing: 2px;
+    font-weight: 200;
 }
 
-.contact-info {
-    font-size: 0.85em;
-    margin-left: 20px;
+.item-header {
+    grid-area: header;
+    background-color: rgba(37, 37, 37, 0.5);
+    border-radius: 10px;
+}
+
+.item-side1 {
+    grid-area: side1;
+    text-align: right;
+}
+
+.item-side2 {
+    grid-area: side2;
+    text-align: right;
+}
+
+.item-side3 {
+    grid-area: side3;
+    text-align: right;
+}
+
+.item-main1 {
+    grid-area: main1;
+}
+
+.item-main2 {
+    grid-area: main2;
+}
+
+.item-space {
+    grid-area: space;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'side1 main1'
+        'side2 main1'
+        'side3 main1'
+        'space main1'
+        'space main1'
+        'space main2';
+    gap: 2% 8%;
+    padding: 30px;
+}
+
+.contact-info,
+.software,
+.references {
+    line-height: 1.6;
+    padding: 0 10% 10% 10%;
+}
+
+.contact-info,
+.software,
+.item-main1 {
+    border-bottom: 2px solid darkgray;
 }
 
 a {
@@ -29,15 +89,6 @@ a {
 a:hover {
     text-decoration: underline;
     color: blue;
-}
-
-button.email:hover {
-    border-color: green;
-    background-color: lightgreen;
-}
-
-button.email:onclick {
-    background-color: red;
 }
 
 .exp-header {
@@ -69,36 +120,85 @@ ul {
     margin-top: 0.5%
 }
 
-.software:hover {
-    background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
-    background-size: cover;
-}
-
 footer {
     text-align: center;
     color: gray;
 }
 
-@media (max-width: 600px) {
-
-    li,
-    .software {
-        font-size: 0.85em;
+@media (max-width: 700px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'side1'
+            'main1'
+            'main2'
+            'side2'
+            'side3';
+        gap: 0.5%;
+        padding: 0px;
     }
-}
 
-@media (max-width: 600px) {
+    .contact-info,
+    .software,
+    .references {
+        line-height: 1;
+        text-align: left;
+        padding: 10px;
+        border-bottom: none;
+    }
+
+    .contact-info,
+    .references,
+    .item-main2 {
+        border-radius: 10px;
+        background-color: rgb(233, 249, 253);
+        padding: 10px;
+    }
+
+    .item-main1 {
+        border-bottom: none;
+    }
+
+    .references {
+        margin-bottom: 50px;
+    }
+
+    .software:hover {
+        background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+        background-size: cover;
+    }
+
     #name {
         font-size: 0.8em;
         letter-spacing: 0;
     }
+
+    li {
+        font-size: 0.85em;
+    }
 }
 
 @media (max-width: 450px) {
-    #name {
+
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    #name,
+    li,
+    .contact-info,
+    .software,
+    .references {
         font-size: 0.7em;
         border: none;
         letter-spacing: 0;
-        display: block;
     }
+
+    .software:hover {
+        background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+        background-size: cover;
+    }
+
 }
