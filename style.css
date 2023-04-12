@@ -190,7 +190,8 @@ footer {
     li,
     .contact-info,
     .software,
-    .references {
+    .references,
+    .item-main2 {
         font-size: 0.7em;
         border: none;
         letter-spacing: 0;
