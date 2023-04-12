@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    padding: 0 10%;
+}
+
+h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: Georgia, Times, serif;
+}
+
+#name {
+    padding: 0 10px 1px 10px;
+    border: rgba(150, 150, 150, 0.5);
+    border-style: none solid solid none;
+    border-width: 1px;
+}
+
+.contact-info {
+    font-size: 0.85em;
+    margin-left: 20px;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+button.email:hover {
+    border-color: green;
+    background-color: lightgreen;
+}
+
+button.email:onclick {
+    background-color: red;
+}
+
+.exp-header {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main {
+    font-weight: bold;
+    margin: auto;
+    display: flex;
+}
+
+main .content {
+    flex: 1;
+}
+
+main .content-2 {
+    text-align: right;
+}
+
+main .space {
+    width: 20%;
+    flex: space-between;
+}
+
+ul {
+    margin-left: 3%;
+    margin-top: 0.5%
+}
+
+.software:hover {
+    background-image: url("https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-size: cover;
+}
+
+footer {
+    text-align: center;
+    color: gray;
+}
+
+@media (max-width: 600px) {
+
+    li,
+    .software {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 600px) {
+    #name {
+        font-size: 0.8em;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    #name {
+        font-size: 0.7em;
+        border: none;
+        letter-spacing: 0;
+        display: block;
+    }
+}
